@@ -1,0 +1,15 @@
+
+lsc_platform_homepage:
+    path:     /home
+    defaults: { _controller: LSCPlatformBundle:Home:index }
+
+lsc_platform_list:
+    path:     /list
+    defaults: { _controller: LSCPlatformBundle:List:index }
+
+lsc_platform_view:
+    path:     /view
+    defaults: { _controller: LSCPlatformBundle:View:index }
+lsc_platform_add:
+    path:     /add
+    defaults: { _controller: LSCPlatformBundle:Add:index }

@@ -1,0 +1,35 @@
+{% extends "layout.html.twig"%}
+{% block body %}
+    <h1 class="row justify-content-center text-white">Add</h1>
+    <div class="conatiner-fluid">
+    <div class="jumbotron bg-secondary">
+    <div class=" row justify-content-start">
+
+        <form action="" method="post" class=" text-white">
+            <div class="form-group col">
+                <label for="title">Titre de l'annonce</label>
+
+                <input type="text" name="title" id="title"></div>
+            </div>
+
+            <div class="form-group col-12">
+                <label for="title">Annonce</label>
+                <div class=" row justify-content-start">
+                    <textarea name="text" id="text"  placeholder="votre annonce ici" style=" width: 100%;"></textarea></div>
+            </div>
+            <div class="form-group col">
+                <label for="price">Prix</label>
+                <div class=" row justify-content-start">
+                    <input type="number" name="price" id="price" placeholder="€"></div>
+            </div>
+            <div class="form-group col">
+                <label for="city">Ville</label>
+                <div class=" row justify-content-start">
+                    <input type="text" name="city" id="city" placeholder="entrez votre ville"></div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="OK">
+        </form>
+    </div>
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,7 @@
+lsc_platform:
+    resource: "@LSCPlatformBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
