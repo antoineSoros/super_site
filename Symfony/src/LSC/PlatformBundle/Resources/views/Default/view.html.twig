@@ -1,4 +1,21 @@
 {% extends "layout.html.twig"%}
 {% block body %}
     <h1 class="row justify-content-center text-white">VIEW</h1>
+    <div class="jumbotron">
+        <div class="row justify-content-center">
+        <h1 class="display-4">{{ annonce.title }}</h1>
+            <div class="card col-1 "style="margin-left: 5%"><h1 class="row justify-content-center" style="padding-top: 15%;">{{ annonce.price }}€</h1></div></div>
+        <hr class="my-4">
+        <p class="lead">{{ annonce.advert }}</p>
+        <hr class="my-4">
+
+        <div class="row justify-content-between">
+                <a type="button" class="btn btn-primary " href="{{ path('lsc_platform_list') }}">RETOUR LISTE</a>
+
+            <div class="card col-2 "><h1 class="row justify-content-center">{{ annonce.city }}</h1></div>
+
+        </div>
+    </div>
+    </div>
+
 {% endblock %}

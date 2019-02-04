@@ -1,4 +1,12 @@
 {% extends "layout.html.twig"%}
 {% block body %}
     <h1 class="row justify-content-center text-white">List</h1>
+    {% for annonce in annonces %}
+    <div class="card col-3" style="margin-top: 5%">
+        <h4 class="d-flex justify-content-center" style="padding-top: 5%">{{ annonce.title |upper }}<span class="badge badge-secondary " style="margin-left: 40%">{{ annonce.price }}€</span></h4>
+
+
+            <a class="btn btn-secondary btn-lg" href={{ path('lsc_platform_view') }}?id={{ annonce.id }}" role="button" style="margin-bottom: 5%">voir</a>
+    </div>
+    {% endfor %}
 {% endblock %}

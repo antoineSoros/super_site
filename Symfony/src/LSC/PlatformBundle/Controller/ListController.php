@@ -7,6 +7,7 @@
  */
 
 namespace LSC\PlatformBundle\Controller;
+use LSC\PlatformBundle\Entity\Annonces;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
@@ -14,7 +15,11 @@ class ListController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('LSCPlatformBundle:Default:list.html.twig');
+      $repository = $this->getDoctrine()->getRepository(Annonces::class);
+
+      $annonces= $repository->findAll();
+      var_dump($annonces);
+        return $this->render('LSCPlatformBundle:Default:list.html.twig',array('annonces'=>$annonces));
     }
 
 
